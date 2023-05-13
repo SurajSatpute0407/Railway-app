@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Railway</string>
+    <string-array name="from">
+        <item></item>
+        <item>Pune Jn</item>
+        <item>Mumbai Jn</item>
+        <item>Nasik Jn</item>
+        <item>Bhuswal Jn</item>
+        <item>Sambhajinagar Jn</item>
+        <item>Kalyan Jn</item>
+        <item>Satara Jn</item>
+    </string-array>
+
+    <string-array name="to">
+        <item></item>
+        <item>Mumbai Jn</item>
+        <item>Nasik Jn</item>
+        <item>Bhusawal Jn</item>
+        <item>Sambhajinagar Jn</item>
+        <item>Kalyan Jn</item>
+        <item>Satara Jn</item>
+        <item>Pune Jn</item>
+    </string-array>
+
+    <string-array name="day">
+        <item>Today</item>
+        <item>Tomarrow</item>
+        <item>Yesterday</item>
+    </string-array>
+
+
+    <string-array name="route">
+        <item>Pune ➔ Mumbai</item>
+        <item>Mumbai ➔ Pune</item>
+        <item>Nasik ➔ Mumbai</item>
+        <item>Mumbai ➔ Nasik</item>
+    </string-array>
+</resources>

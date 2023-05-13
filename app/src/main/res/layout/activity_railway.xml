@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    tools:context=".railway">
+
+    <ImageView
+        android:id="@+id/trainlogo"
+        android:layout_width="165dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="123dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/train" />
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="119dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="167dp"
+        android:background="@drawable/border"
+        android:paddingLeft="18dp"
+        android:paddingRight="10dp"
+        android:text="Select Train"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trainlogo" />
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="56dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="67dp"
+        android:background="@drawable/border"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:text="From"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/From_Station"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/select" />
+
+    <Spinner
+        android:id="@+id/From_Station"
+        android:layout_width="211dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/border"
+        android:contentDescription="from"
+        android:drawableEnd="@drawable/drop_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/from"
+        app:layout_constraintTop_toBottomOf="@+id/select" />
+
+    <Spinner
+        android:id="@+id/To_station"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/border"
+        android:contentDescription="Choose here"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintEnd_toEndOf="@+id/From_Station"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/From_Station"
+        app:layout_constraintTop_toBottomOf="@+id/From_Station" />
+
+    <Button
+        android:id="@+id/Search"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="133dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/black"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:text="Search Train"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/To_station" />
+
+    <TextView
+        android:id="@+id/To"
+        android:layout_width="51dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/border"
+        android:paddingLeft="15dp"
+        android:paddingTop="8dp"
+        android:text="To"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/from"
+        app:layout_constraintStart_toStartOf="@+id/from"
+        app:layout_constraintTop_toBottomOf="@+id/From_Station" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="69dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Search">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:text="Trains By Name/No"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/trainno1"
+            android:layout_width="67dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="-60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Search"
+            app:srcCompat="@drawable/trainbyno" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="72dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/Search">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="65dp"
+            android:text="Seat Available"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/seat_avail"
+            android:layout_width="67dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="-60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/trainno"
+            app:layout_constraintTop_toBottomOf="@+id/Search"
+            app:srcCompat="@drawable/seat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="65dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/Search">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="65dp"
+            android:text="Station Status"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/station_status"
+            android:layout_width="67dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="-60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/seat_avail"
+            app:layout_constraintTop_toBottomOf="@+id/Search"
+            app:srcCompat="@drawable/station" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="65dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/Search">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="65dp"
+            android:text="Coach Position"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/coach_position"
+            android:layout_width="67dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="-60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/station_status"
+            app:layout_constraintTop_toBottomOf="@+id/To_station"
+            app:srcCompat="@drawable/coach" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="226dp"
+        android:layout_height="56dp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
